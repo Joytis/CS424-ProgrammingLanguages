@@ -1,0 +1,27 @@
+program -> int main ( ) { declarations statements }
+declarations -> { declaration }
+declaration -> type identifier [ [digit] ] ;
+type -> int | bool | float | char
+statements -> { statement }
+statement -> ; | block | assignment | if_statement | while_statement
+block -> { statements }
+assignment -> identifier [ [digit] ] = expression ;
+if_statement -> if ( expression ) statement
+while_statement -> while ( expression ) statement
+expression -> conjunction { || conjunction }
+conjunction -> equality { && equality }
+equality -> relation [ equ_op relation ]
+equ_op -> == | !=
+relation -> addition [ rel_op addition ]
+rel_op -> < | <= | > | >=
+addition -> term { add_op term }
+add_op -> + | -
+term -> factor { mul_op factor }
+mul_op -> * | / | %
+factor -> [ unary_op ] primary
+unary_op -> - | !
+primary -> identifier [ [digit] ] | literal | ( expression ) | type ( expression ) 
+literal --> digit | boolean
+identifier -> A | ... | Z
+boolean --> true | false
+digit --> 0 | ... | 9

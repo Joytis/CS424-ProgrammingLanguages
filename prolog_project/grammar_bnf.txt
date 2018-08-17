@@ -1,0 +1,27 @@
+<program> -> int main ( ) { declarations statements }
+// <declarations> -> <declaration> | <declarations><declaration>
+// <declaration> -> <type> <identifier> ; | <type> <identifier>[<digit>] ;
+//   <type> -> int | bool | float | char
+//   <statements> -> <statement> | <statements><statement>
+//   <statement> -> ; | <block> | <assignment> | <if_statement> | <while_statement>
+//   <block> -> { <statements> }
+//   <assignment> -> <identifier> = <expression> ; | <identifier>[<digit>] = <expressions>;
+//   <if_statement> -> if ( <expression> ) <statement>
+//   <while_statement> -> while ( <expression> ) <statement>
+//   <expression> -> <conjunction> | <expression> || <conjunction>
+//   <conjunction> -> <equality> | <conjunction> && <equality>
+//   <equality> -> <relation> | <relation> <equ_op> <relation>
+//   <equ_op> -> == | !=
+//   <relation> -> <addition> | <addition> <rel_op> <addition>
+//   <rel_op> -> < | <= | > | >=
+//   <addition> -> <term> | <addition> <add_op> <term>
+//   <add_op> -> + | -
+//   <term> -> <factor> | <term> <mul_op> <factor> 
+//   <mul_op> -> * | / | %
+//   <factor> -> <primary> | <unary_op> <primary> 
+//   <unary_op> -> - | !
+//   <primary> -> <identifier> | <identifier>[digit] | <literal> | ( <expression> ) | <type> ( <expression> ) 
+//   <literal> --> <digit> | <boolean>
+//   <identifier> -> A | ... | Z
+//   <boolean> --> true | false
+//   <digit> --> 0 | ... | 9

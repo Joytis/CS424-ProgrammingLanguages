@@ -1,0 +1,12 @@
+int main ( )
+{
+   int a ;
+   float b ;
+
+   a = a + b ;
+
+   if ( a || b && c ) {
+      c = d + e - ( a + ( b % c ) ) ;
+      a = b ;
+   }
+}
